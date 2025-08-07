@@ -1,0 +1,106 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-38720a3f32faf41f2a30.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "px4_controller",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "OFFF::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-OFFF-a596451f7d8140c7284d.json",
+					"name" : "OFFF",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "arm2::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-arm2-5346b092ce4ecf01f964.json",
+					"name" : "arm2",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "mis1::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-mis1-6187ac505fc790a70b61.json",
+					"name" : "mis1",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "offboard::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-offboard-439533703211825ba554.json",
+					"name" : "offboard",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "px4_controller_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-px4_controller_uninstall-dbe704fff0b8ca44ab04.json",
+					"name" : "px4_controller_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-0e07fcd983257a487cac.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/vaderplz/px4_ws/src/px4_controller/build/px4_controller",
+		"source" : "/home/vaderplz/px4_ws/src/px4_controller"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

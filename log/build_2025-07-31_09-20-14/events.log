@@ -1,0 +1,261 @@
+[0.000000] (-) TimerEvent: {}
+[0.000761] (px4_controller) JobQueued: {'identifier': 'px4_controller', 'dependencies': OrderedDict()}
+[0.001189] (px4_controller) JobStarted: {'identifier': 'px4_controller'}
+[0.021677] (px4_controller) JobProgress: {'identifier': 'px4_controller', 'progress': 'cmake'}
+[0.022350] (px4_controller) Command: {'cmd': ['/usr/bin/cmake', '/home/vaderplz/px4_ws/src/px4_controller', '-DCMAKE_INSTALL_PREFIX=/home/vaderplz/px4_ws/src/px4_controller/install/px4_controller'], 'cwd': '/home/vaderplz/px4_ws/src/px4_controller/build/px4_controller', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'vi:en'), ('USER', 'vaderplz'), ('LC_TIME', 'vi_VN'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/vaderplz/px4_ws/install/mavros_extras/lib:/home/vaderplz/px4_ws/install/mavros/lib:/home/vaderplz/px4_ws/install/mavros_msgs/lib:/home/vaderplz/px4_ws/install/libmavconn/lib:/home/vaderplz/ros2_ws/install/turtlesim/lib:/home/vaderplz/ws_offboard_control/install/px4_ros_com/lib:/home/vaderplz/ws_offboard_control/install/px4_msgs/lib:/home/vaderplz/ros2_ws2/install/mavros_extras/lib:/home/vaderplz/ros2_ws2/install/mavros/lib:/home/vaderplz/ros2_ws2/install/mavros_msgs/lib:/home/vaderplz/ros2_ws2/install/libmavconn/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/vaderplz'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'vi_VN'), ('SYSTEMD_EXEC_PID', '2753'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/vaderplz/ws_offboard_control/install:/home/vaderplz/ros2_ws/install:/home/vaderplz/ros2_ws2/install:/home/vaderplz/px4_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'vaderplz'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/home/vaderplz/px4_ws/install/mavlink/lib/x86_64-linux-gnu/pkgconfig:/home/vaderplz/px4_ws/install/mavlink/lib/pkgconfig:/home/vaderplz/ros2_ws2/install/mavlink/lib/x86_64-linux-gnu/pkgconfig:/home/vaderplz/ros2_ws2/install/mavlink/lib/pkgconfig'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'vaderplz'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/vaderplz/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/vaderplz/.local/bin:/home/vaderplz/.local/bin'), ('SESSION_MANAGER', 'local/vaderplz-Inspiron-3501:@/tmp/.ICE-unix/924,unix/vaderplz-Inspiron-3501:/tmp/.ICE-unix/924'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'vi_VN'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/e0cfc797_393e_4381_9b83_1ab04728cc96'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'vi_VN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'vi_VN'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.M4ZEA3'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.130'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/vaderplz/px4_ws/install/px4_controller:/home/vaderplz/px4_ws/install/mavros_extras:/home/vaderplz/px4_ws/install/mavros:/home/vaderplz/px4_ws/install/mavros_msgs:/home/vaderplz/px4_ws/install/libmavconn:/home/vaderplz/ros2_ws/install/pid_controller:/home/vaderplz/ros2_ws/install/turtlesim:/home/vaderplz/ros2_ws/install/spawn_turtles:/home/vaderplz/ros2_ws/install/px4_controller:/home/vaderplz/ros2_ws/install/hardcode:/home/vaderplz/ros2_ws/install/cpp_srvcli:/home/vaderplz/ws_offboard_control/install/px4_ros_com:/home/vaderplz/ws_offboard_control/install/px4_offboard:/home/vaderplz/ws_offboard_control/install/px4_msgs:/home/vaderplz/ros2_ws2/install/mavros_extras:/home/vaderplz/ros2_ws2/install/mavros:/home/vaderplz/ros2_ws2/install/mavros_msgs:/home/vaderplz/ros2_ws2/install/libmavconn:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'vi_VN'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'vi_VN'), ('LC_IDENTIFICATION', 'vi_VN'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/vaderplz/px4_ws/src/px4_controller/build/px4_controller'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/vaderplz/px4_ws/install/mavros/local/lib/python3.10/dist-packages:/home/vaderplz/px4_ws/install/mavros_msgs/local/lib/python3.10/dist-packages:/home/vaderplz/ros2_ws/install/turtlesim/local/lib/python3.10/dist-packages:/home/vaderplz/ws_offboard_control/install/px4_ros_com/local/lib/python3.10/dist-packages:/home/vaderplz/ws_offboard_control/install/px4_offboard/lib/python3.10/site-packages:/home/vaderplz/ws_offboard_control/install/px4_msgs/local/lib/python3.10/dist-packages:/home/vaderplz/ros2_ws2/install/mavros/local/lib/python3.10/dist-packages:/home/vaderplz/ros2_ws2/install/mavros_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'vi_VN'), ('LC_PAPER', 'vi_VN'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/vaderplz/px4_ws/install/px4_controller:/home/vaderplz/px4_ws/install/mavros_extras:/home/vaderplz/px4_ws/install/mavros:/home/vaderplz/px4_ws/install/mavros_msgs:/home/vaderplz/px4_ws/install/libmavconn:/home/vaderplz/px4_ws/install/mavlink:/home/vaderplz/ros2_ws/install/pid_controller:/home/vaderplz/ros2_ws/install/turtlesim:/home/vaderplz/ros2_ws/install/spawn_turtles:/home/vaderplz/ros2_ws/install/px4_controller:/home/vaderplz/ros2_ws/install/hardcode:/home/vaderplz/ros2_ws/install/cpp_srvcli:/home/vaderplz/ws_offboard_control/install/px4_ros_com:/home/vaderplz/ws_offboard_control/install/px4_msgs:/home/vaderplz/ros2_ws2/install/mavros_extras:/home/vaderplz/ros2_ws2/install/mavros:/home/vaderplz/ros2_ws2/install/mavros_msgs:/home/vaderplz/ros2_ws2/install/libmavconn:/home/vaderplz/ros2_ws2/install/mavlink:/home/vaderplz/ws_offboard_control/install/px4_offboard:/opt/ros/humble')]), 'shell': False}
+[0.099609] (-) TimerEvent: {}
+[0.182666] (px4_controller) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.200248] (-) TimerEvent: {}
+[0.302013] (-) TimerEvent: {}
+[0.382458] (px4_controller) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.402144] (-) TimerEvent: {}
+[0.404118] (px4_controller) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.502263] (-) TimerEvent: {}
+[0.532564] (px4_controller) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.548374] (px4_controller) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.549263] (px4_controller) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.550926] (px4_controller) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.558947] (px4_controller) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.602368] (-) TimerEvent: {}
+[0.689450] (px4_controller) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.703090] (-) TimerEvent: {}
+[0.707576] (px4_controller) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.708907] (px4_controller) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.709209] (px4_controller) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.729230] (px4_controller) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.803193] (-) TimerEvent: {}
+[0.903503] (-) TimerEvent: {}
+[1.003889] (-) TimerEvent: {}
+[1.104186] (-) TimerEvent: {}
+[1.204461] (-) TimerEvent: {}
+[1.250828] (px4_controller) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[1.304562] (-) TimerEvent: {}
+[1.404861] (-) TimerEvent: {}
+[1.416387] (px4_controller) StdoutLine: {'line': b'-- Found rclcpp: 16.0.14 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[1.504998] (-) TimerEvent: {}
+[1.513013] (px4_controller) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.7 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[1.524383] (px4_controller) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[1.545475] (px4_controller) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.7 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[1.573933] (px4_controller) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.605106] (-) TimerEvent: {}
+[1.605960] (px4_controller) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.701316] (px4_controller) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[1.705239] (-) TimerEvent: {}
+[1.709410] (px4_controller) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.8 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[1.805382] (-) TimerEvent: {}
+[1.873645] (px4_controller) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[1.905530] (-) TimerEvent: {}
+[1.923947] (px4_controller) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[1.980254] (px4_controller) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[2.000644] (px4_controller) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[2.005663] (-) TimerEvent: {}
+[2.096613] (px4_controller) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[2.097307] (px4_controller) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[2.105769] (-) TimerEvent: {}
+[2.196838] (px4_controller) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[2.198185] (px4_controller) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[2.205905] (-) TimerEvent: {}
+[2.295259] (px4_controller) StdoutLine: {'line': b'-- Found mavros_msgs: 2.10.1 (/home/vaderplz/px4_ws/install/mavros_msgs/share/mavros_msgs/cmake)\n'}
+[2.306011] (-) TimerEvent: {}
+[2.406318] (-) TimerEvent: {}
+[2.446771] (px4_controller) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[2.506424] (-) TimerEvent: {}
+[2.606813] (-) TimerEvent: {}
+[2.613794] (px4_controller) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[2.614177] (px4_controller) StdoutLine: {'line': b'-- Configured cppcheck include dirs: \n'}
+[2.614264] (px4_controller) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[2.617814] (px4_controller) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[2.624046] (px4_controller) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[2.624260] (px4_controller) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[2.626401] (px4_controller) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[2.630680] (px4_controller) StdoutLine: {'line': b'-- Configuring done\n'}
+[2.661195] (px4_controller) StdoutLine: {'line': b'-- Generating done\n'}
+[2.676077] (px4_controller) StdoutLine: {'line': b'-- Build files have been written to: /home/vaderplz/px4_ws/src/px4_controller/build/px4_controller\n'}
+[2.693114] (px4_controller) CommandEnded: {'returncode': 0}
+[2.694273] (px4_controller) JobProgress: {'identifier': 'px4_controller', 'progress': 'build'}
+[2.695663] (px4_controller) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/vaderplz/px4_ws/src/px4_controller/build/px4_controller', '--', '-j8', '-l8'], 'cwd': '/home/vaderplz/px4_ws/src/px4_controller/build/px4_controller', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'vi:en'), ('USER', 'vaderplz'), ('LC_TIME', 'vi_VN'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/vaderplz/px4_ws/install/mavros_extras/lib:/home/vaderplz/px4_ws/install/mavros/lib:/home/vaderplz/px4_ws/install/mavros_msgs/lib:/home/vaderplz/px4_ws/install/libmavconn/lib:/home/vaderplz/ros2_ws/install/turtlesim/lib:/home/vaderplz/ws_offboard_control/install/px4_ros_com/lib:/home/vaderplz/ws_offboard_control/install/px4_msgs/lib:/home/vaderplz/ros2_ws2/install/mavros_extras/lib:/home/vaderplz/ros2_ws2/install/mavros/lib:/home/vaderplz/ros2_ws2/install/mavros_msgs/lib:/home/vaderplz/ros2_ws2/install/libmavconn/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/vaderplz'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'vi_VN'), ('SYSTEMD_EXEC_PID', '2753'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/vaderplz/ws_offboard_control/install:/home/vaderplz/ros2_ws/install:/home/vaderplz/ros2_ws2/install:/home/vaderplz/px4_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'vaderplz'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/home/vaderplz/px4_ws/install/mavlink/lib/x86_64-linux-gnu/pkgconfig:/home/vaderplz/px4_ws/install/mavlink/lib/pkgconfig:/home/vaderplz/ros2_ws2/install/mavlink/lib/x86_64-linux-gnu/pkgconfig:/home/vaderplz/ros2_ws2/install/mavlink/lib/pkgconfig'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'vaderplz'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/vaderplz/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/vaderplz/.local/bin:/home/vaderplz/.local/bin'), ('SESSION_MANAGER', 'local/vaderplz-Inspiron-3501:@/tmp/.ICE-unix/924,unix/vaderplz-Inspiron-3501:/tmp/.ICE-unix/924'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'vi_VN'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/e0cfc797_393e_4381_9b83_1ab04728cc96'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'vi_VN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'vi_VN'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.M4ZEA3'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.130'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/vaderplz/px4_ws/install/px4_controller:/home/vaderplz/px4_ws/install/mavros_extras:/home/vaderplz/px4_ws/install/mavros:/home/vaderplz/px4_ws/install/mavros_msgs:/home/vaderplz/px4_ws/install/libmavconn:/home/vaderplz/ros2_ws/install/pid_controller:/home/vaderplz/ros2_ws/install/turtlesim:/home/vaderplz/ros2_ws/install/spawn_turtles:/home/vaderplz/ros2_ws/install/px4_controller:/home/vaderplz/ros2_ws/install/hardcode:/home/vaderplz/ros2_ws/install/cpp_srvcli:/home/vaderplz/ws_offboard_control/install/px4_ros_com:/home/vaderplz/ws_offboard_control/install/px4_offboard:/home/vaderplz/ws_offboard_control/install/px4_msgs:/home/vaderplz/ros2_ws2/install/mavros_extras:/home/vaderplz/ros2_ws2/install/mavros:/home/vaderplz/ros2_ws2/install/mavros_msgs:/home/vaderplz/ros2_ws2/install/libmavconn:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'vi_VN'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'vi_VN'), ('LC_IDENTIFICATION', 'vi_VN'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/vaderplz/px4_ws/src/px4_controller/build/px4_controller'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/vaderplz/px4_ws/install/mavros/local/lib/python3.10/dist-packages:/home/vaderplz/px4_ws/install/mavros_msgs/local/lib/python3.10/dist-packages:/home/vaderplz/ros2_ws/install/turtlesim/local/lib/python3.10/dist-packages:/home/vaderplz/ws_offboard_control/install/px4_ros_com/local/lib/python3.10/dist-packages:/home/vaderplz/ws_offboard_control/install/px4_offboard/lib/python3.10/site-packages:/home/vaderplz/ws_offboard_control/install/px4_msgs/local/lib/python3.10/dist-packages:/home/vaderplz/ros2_ws2/install/mavros/local/lib/python3.10/dist-packages:/home/vaderplz/ros2_ws2/install/mavros_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'vi_VN'), ('LC_PAPER', 'vi_VN'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/vaderplz/px4_ws/install/px4_controller:/home/vaderplz/px4_ws/install/mavros_extras:/home/vaderplz/px4_ws/install/mavros:/home/vaderplz/px4_ws/install/mavros_msgs:/home/vaderplz/px4_ws/install/libmavconn:/home/vaderplz/px4_ws/install/mavlink:/home/vaderplz/ros2_ws/install/pid_controller:/home/vaderplz/ros2_ws/install/turtlesim:/home/vaderplz/ros2_ws/install/spawn_turtles:/home/vaderplz/ros2_ws/install/px4_controller:/home/vaderplz/ros2_ws/install/hardcode:/home/vaderplz/ros2_ws/install/cpp_srvcli:/home/vaderplz/ws_offboard_control/install/px4_ros_com:/home/vaderplz/ws_offboard_control/install/px4_msgs:/home/vaderplz/ros2_ws2/install/mavros_extras:/home/vaderplz/ros2_ws2/install/mavros:/home/vaderplz/ros2_ws2/install/mavros_msgs:/home/vaderplz/ros2_ws2/install/libmavconn:/home/vaderplz/ros2_ws2/install/mavlink:/home/vaderplz/ws_offboard_control/install/px4_offboard:/opt/ros/humble')]), 'shell': False}
+[2.708198] (-) TimerEvent: {}
+[2.785655] (px4_controller) StdoutLine: {'line': b'[ 12%] \x1b[32mBuilding CXX object CMakeFiles/offboard.dir/src/set_offboard.cpp.o\x1b[0m\n'}
+[2.789349] (px4_controller) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding CXX object CMakeFiles/OFFF.dir/src/OFFBOARD_NODE.cpp.o\x1b[0m\n'}
+[2.789896] (px4_controller) StdoutLine: {'line': b'[ 37%] \x1b[32mBuilding CXX object CMakeFiles/arm2.dir/src/arm2.cpp.o\x1b[0m\n'}
+[2.790208] (px4_controller) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/mis1.dir/src/mission1.cpp.o\x1b[0m\n'}
+[2.808406] (-) TimerEvent: {}
+[2.909073] (-) TimerEvent: {}
+[3.010340] (-) TimerEvent: {}
+[3.110673] (-) TimerEvent: {}
+[3.211064] (-) TimerEvent: {}
+[3.311383] (-) TimerEvent: {}
+[3.411696] (-) TimerEvent: {}
+[3.512088] (-) TimerEvent: {}
+[3.612700] (-) TimerEvent: {}
+[3.713539] (-) TimerEvent: {}
+[3.817095] (-) TimerEvent: {}
+[3.918636] (-) TimerEvent: {}
+[4.019274] (-) TimerEvent: {}
+[4.120032] (-) TimerEvent: {}
+[4.221141] (-) TimerEvent: {}
+[4.321645] (-) TimerEvent: {}
+[4.422246] (-) TimerEvent: {}
+[4.522628] (-) TimerEvent: {}
+[4.623557] (-) TimerEvent: {}
+[4.724198] (-) TimerEvent: {}
+[4.826614] (-) TimerEvent: {}
+[4.930939] (-) TimerEvent: {}
+[5.032071] (-) TimerEvent: {}
+[5.132939] (-) TimerEvent: {}
+[5.233405] (-) TimerEvent: {}
+[5.334204] (-) TimerEvent: {}
+[5.434928] (-) TimerEvent: {}
+[5.535540] (-) TimerEvent: {}
+[5.636426] (-) TimerEvent: {}
+[5.736862] (-) TimerEvent: {}
+[5.839772] (-) TimerEvent: {}
+[5.941281] (-) TimerEvent: {}
+[6.041706] (-) TimerEvent: {}
+[6.143026] (-) TimerEvent: {}
+[6.243443] (-) TimerEvent: {}
+[6.343840] (-) TimerEvent: {}
+[6.444314] (-) TimerEvent: {}
+[6.544729] (-) TimerEvent: {}
+[6.645122] (-) TimerEvent: {}
+[6.746345] (-) TimerEvent: {}
+[6.847322] (-) TimerEvent: {}
+[6.947724] (-) TimerEvent: {}
+[7.048194] (-) TimerEvent: {}
+[7.148739] (-) TimerEvent: {}
+[7.250373] (-) TimerEvent: {}
+[7.350849] (-) TimerEvent: {}
+[7.451364] (-) TimerEvent: {}
+[7.551915] (-) TimerEvent: {}
+[7.652464] (-) TimerEvent: {}
+[7.753101] (-) TimerEvent: {}
+[7.760813] (px4_controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/vaderplz/px4_ws/src/px4_controller/src/OFFBOARD_NODE.cpp:53:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected unqualified-id before \xe2\x80\x98\x1b[01m\x1b[Kif\x1b[m\x1b[K\xe2\x80\x99\n'}
+[7.761150] (px4_controller) StderrLine: {'line': b'   53 |         \x1b[01;31m\x1b[Kif\x1b[m\x1b[K (rclcpp::spin_until_future_complete(this->get_node_base_interface(), arming_future) == rclcpp::FutureReturnCode::SUCCESS) {\n'}
+[7.761297] (px4_controller) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~\x1b[m\x1b[K\n'}
+[7.761416] (px4_controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/vaderplz/px4_ws/src/px4_controller/src/OFFBOARD_NODE.cpp:59:7:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected unqualified-id before \xe2\x80\x98\x1b[01m\x1b[Kelse\x1b[m\x1b[K\xe2\x80\x99\n'}
+[7.761526] (px4_controller) StderrLine: {'line': b'   59 |     } \x1b[01;31m\x1b[Kelse\x1b[m\x1b[K {\n'}
+[7.761620] (px4_controller) StderrLine: {'line': b'      |       \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[7.761731] (px4_controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/vaderplz/px4_ws/src/px4_controller/src/OFFBOARD_NODE.cpp:60:77:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected declaration before \xe2\x80\x98\x1b[01m\x1b[K}\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[7.761836] (px4_controller) StderrLine: {'line': b'   60 |         RCLCPP_ERROR(this->get_logger(), "Failed to call arming service.");}\x1b[01;31m\x1b[K}\x1b[m\x1b[K\n'}
+[7.761937] (px4_controller) StderrLine: {'line': b'      |                                                                             \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[7.844218] (px4_controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/vaderplz/px4_ws/src/px4_controller/src/mission1.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid OffboardControl::control_loop()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[7.844686] (px4_controller) StderrLine: {'line': b'\x1b[01m\x1b[K/home/vaderplz/px4_ws/src/px4_controller/src/mission1.cpp:75:16:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kenumeration value \xe2\x80\x98\x1b[01m\x1b[KSTREAMING_SETPOINTS\x1b[m\x1b[K\xe2\x80\x99 not handled in switch [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wswitch\x07-Wswitch\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[7.844900] (px4_controller) StderrLine: {'line': b'   75 |         switch \x1b[01;35m\x1b[K(\x1b[m\x1b[Knode_state_) {\n'}
+[7.845012] (px4_controller) StderrLine: {'line': b'      |                \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[7.853270] (-) TimerEvent: {}
+[7.953818] (-) TimerEvent: {}
+[8.054693] (-) TimerEvent: {}
+[8.155159] (-) TimerEvent: {}
+[8.255756] (-) TimerEvent: {}
+[8.357026] (-) TimerEvent: {}
+[8.457866] (-) TimerEvent: {}
+[8.559202] (-) TimerEvent: {}
+[8.660803] (-) TimerEvent: {}
+[8.761449] (-) TimerEvent: {}
+[8.862560] (-) TimerEvent: {}
+[8.963052] (-) TimerEvent: {}
+[9.063456] (-) TimerEvent: {}
+[9.163960] (-) TimerEvent: {}
+[9.264517] (-) TimerEvent: {}
+[9.365366] (-) TimerEvent: {}
+[9.465899] (-) TimerEvent: {}
+[9.566731] (-) TimerEvent: {}
+[9.667502] (-) TimerEvent: {}
+[9.696589] (px4_controller) StdoutLine: {'line': b'[ 62%] \x1b[32m\x1b[1mLinking CXX executable offboard\x1b[0m\n'}
+[9.768381] (-) TimerEvent: {}
+[9.778427] (px4_controller) StdoutLine: {'line': b'[ 75%] \x1b[32m\x1b[1mLinking CXX executable arm2\x1b[0m\n'}
+[9.868589] (-) TimerEvent: {}
+[9.915194] (px4_controller) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/OFFF.dir/build.make:76: CMakeFiles/OFFF.dir/src/OFFBOARD_NODE.cpp.o] Error 1\n'}
+[9.915576] (px4_controller) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:221: CMakeFiles/OFFF.dir/all] Error 2\n'}
+[9.915707] (px4_controller) StderrLine: {'line': b'gmake[1]: *** Waiting for unfinished jobs....\n'}
+[9.969861] (-) TimerEvent: {}
+[10.070282] (-) TimerEvent: {}
+[10.112856] (px4_controller) StdoutLine: {'line': b'[ 75%] Built target offboard\n'}
+[10.129690] (px4_controller) StdoutLine: {'line': b'[ 75%] Built target arm2\n'}
+[10.170387] (-) TimerEvent: {}
+[10.270681] (-) TimerEvent: {}
+[10.371061] (-) TimerEvent: {}
+[10.471356] (-) TimerEvent: {}
+[10.571666] (-) TimerEvent: {}
+[10.672052] (-) TimerEvent: {}
+[10.772435] (-) TimerEvent: {}
+[10.872770] (-) TimerEvent: {}
+[10.973092] (-) TimerEvent: {}
+[11.073573] (-) TimerEvent: {}
+[11.173973] (-) TimerEvent: {}
+[11.274369] (-) TimerEvent: {}
+[11.374655] (-) TimerEvent: {}
+[11.474971] (-) TimerEvent: {}
+[11.575429] (-) TimerEvent: {}
+[11.675798] (-) TimerEvent: {}
+[11.776385] (-) TimerEvent: {}
+[11.876687] (-) TimerEvent: {}
+[11.977008] (-) TimerEvent: {}
+[12.077465] (-) TimerEvent: {}
+[12.178023] (-) TimerEvent: {}
+[12.278351] (-) TimerEvent: {}
+[12.378691] (-) TimerEvent: {}
+[12.479095] (-) TimerEvent: {}
+[12.579637] (-) TimerEvent: {}
+[12.680056] (-) TimerEvent: {}
+[12.780443] (-) TimerEvent: {}
+[12.880810] (-) TimerEvent: {}
+[12.981265] (-) TimerEvent: {}
+[13.082585] (-) TimerEvent: {}
+[13.182948] (-) TimerEvent: {}
+[13.283626] (-) TimerEvent: {}
+[13.383999] (-) TimerEvent: {}
+[13.484375] (-) TimerEvent: {}
+[13.584739] (-) TimerEvent: {}
+[13.685087] (-) TimerEvent: {}
+[13.785357] (-) TimerEvent: {}
+[13.885648] (-) TimerEvent: {}
+[13.986073] (-) TimerEvent: {}
+[14.086546] (-) TimerEvent: {}
+[14.186873] (-) TimerEvent: {}
+[14.287162] (-) TimerEvent: {}
+[14.387478] (-) TimerEvent: {}
+[14.487760] (-) TimerEvent: {}
+[14.588084] (-) TimerEvent: {}
+[14.688367] (-) TimerEvent: {}
+[14.788638] (-) TimerEvent: {}
+[14.888947] (-) TimerEvent: {}
+[14.989292] (-) TimerEvent: {}
+[15.089629] (-) TimerEvent: {}
+[15.190026] (-) TimerEvent: {}
+[15.290474] (-) TimerEvent: {}
+[15.390831] (-) TimerEvent: {}
+[15.491186] (-) TimerEvent: {}
+[15.591562] (-) TimerEvent: {}
+[15.692172] (-) TimerEvent: {}
+[15.792545] (-) TimerEvent: {}
+[15.892915] (-) TimerEvent: {}
+[15.993569] (-) TimerEvent: {}
+[16.094217] (-) TimerEvent: {}
+[16.194687] (-) TimerEvent: {}
+[16.295154] (-) TimerEvent: {}
+[16.395683] (-) TimerEvent: {}
+[16.496096] (-) TimerEvent: {}
+[16.596394] (-) TimerEvent: {}
+[16.696817] (-) TimerEvent: {}
+[16.797348] (-) TimerEvent: {}
+[16.897706] (-) TimerEvent: {}
+[16.998085] (-) TimerEvent: {}
+[17.098560] (-) TimerEvent: {}
+[17.199004] (-) TimerEvent: {}
+[17.299335] (-) TimerEvent: {}
+[17.399653] (-) TimerEvent: {}
+[17.418759] (px4_controller) StdoutLine: {'line': b'[ 87%] \x1b[32m\x1b[1mLinking CXX executable mis1\x1b[0m\n'}
+[17.499783] (-) TimerEvent: {}
+[17.600191] (-) TimerEvent: {}
+[17.700635] (-) TimerEvent: {}
+[17.801010] (-) TimerEvent: {}
+[17.901351] (-) TimerEvent: {}
+[18.001676] (-) TimerEvent: {}
+[18.102064] (-) TimerEvent: {}
+[18.202367] (-) TimerEvent: {}
+[18.204931] (px4_controller) StdoutLine: {'line': b'[ 87%] Built target mis1\n'}
+[18.206446] (px4_controller) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[18.208983] (px4_controller) CommandEnded: {'returncode': 2}
+[18.231145] (px4_controller) JobEnded: {'identifier': 'px4_controller', 'rc': 2}
+[18.241703] (-) EventReactorShutdown: {}

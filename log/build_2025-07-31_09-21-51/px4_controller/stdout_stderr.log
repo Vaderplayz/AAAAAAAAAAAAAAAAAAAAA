@@ -1,0 +1,31 @@
+[35m[1mConsolidate compiler generated dependencies of target OFFF[0m
+[ 12%] [32mBuilding CXX object CMakeFiles/OFFF.dir/src/OFFBOARD_NODE.cpp.o[0m
+[ 37%] Built target arm2
+[ 62%] Built target offboard
+[ 87%] Built target mis1
+[100%] [32m[1mLinking CXX executable OFFF[0m
+[100%] Built target OFFF
+-- Install configuration: ""
+-- Installing: /home/vaderplz/px4_ws/src/px4_controller/install/px4_controller/lib/px4_controller/offboard
+-- Set runtime path of "/home/vaderplz/px4_ws/src/px4_controller/install/px4_controller/lib/px4_controller/offboard" to ""
+-- Installing: /home/vaderplz/px4_ws/src/px4_controller/install/px4_controller/lib/px4_controller/arm2
+-- Set runtime path of "/home/vaderplz/px4_ws/src/px4_controller/install/px4_controller/lib/px4_controller/arm2" to ""
+-- Installing: /home/vaderplz/px4_ws/src/px4_controller/install/px4_controller/lib/px4_controller/mis1
+-- Set runtime path of "/home/vaderplz/px4_ws/src/px4_controller/install/px4_controller/lib/px4_controller/mis1" to ""
+-- Installing: /home/vaderplz/px4_ws/src/px4_controller/install/px4_controller/lib/px4_controller/OFFF
+-- Set runtime path of "/home/vaderplz/px4_ws/src/px4_controller/install/px4_controller/lib/px4_controller/OFFF" to ""
+-- Installing: /home/vaderplz/px4_ws/src/px4_controller/install/px4_controller/share/ament_index/resource_index/package_run_dependencies/px4_controller
+-- Installing: /home/vaderplz/px4_ws/src/px4_controller/install/px4_controller/share/ament_index/resource_index/parent_prefix_path/px4_controller
+-- Installing: /home/vaderplz/px4_ws/src/px4_controller/install/px4_controller/share/px4_controller/environment/ament_prefix_path.sh
+-- Installing: /home/vaderplz/px4_ws/src/px4_controller/install/px4_controller/share/px4_controller/environment/ament_prefix_path.dsv
+-- Installing: /home/vaderplz/px4_ws/src/px4_controller/install/px4_controller/share/px4_controller/environment/path.sh
+-- Installing: /home/vaderplz/px4_ws/src/px4_controller/install/px4_controller/share/px4_controller/environment/path.dsv
+-- Installing: /home/vaderplz/px4_ws/src/px4_controller/install/px4_controller/share/px4_controller/local_setup.bash
+-- Installing: /home/vaderplz/px4_ws/src/px4_controller/install/px4_controller/share/px4_controller/local_setup.sh
+-- Installing: /home/vaderplz/px4_ws/src/px4_controller/install/px4_controller/share/px4_controller/local_setup.zsh
+-- Installing: /home/vaderplz/px4_ws/src/px4_controller/install/px4_controller/share/px4_controller/local_setup.dsv
+-- Installing: /home/vaderplz/px4_ws/src/px4_controller/install/px4_controller/share/px4_controller/package.dsv
+-- Installing: /home/vaderplz/px4_ws/src/px4_controller/install/px4_controller/share/ament_index/resource_index/packages/px4_controller
+-- Installing: /home/vaderplz/px4_ws/src/px4_controller/install/px4_controller/share/px4_controller/cmake/px4_controllerConfig.cmake
+-- Installing: /home/vaderplz/px4_ws/src/px4_controller/install/px4_controller/share/px4_controller/cmake/px4_controllerConfig-version.cmake
+-- Installing: /home/vaderplz/px4_ws/src/px4_controller/install/px4_controller/share/px4_controller/package.xml

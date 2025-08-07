@@ -1,0 +1,22 @@
+[0.020s] Invoking command in '/home/vaderplz/px4_ws/src/px4_controller/build/px4_controller': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/vaderplz/ws_offboard_control/install/px4_offboard:/opt/ros/humble /usr/bin/cmake --build /home/vaderplz/px4_ws/src/px4_controller/build/px4_controller -- -j8 -l8
+[0.071s] [35m[1mConsolidate compiler generated dependencies of target mis1[0m
+[0.073s] [35m[1mConsolidate compiler generated dependencies of target offboard[0m
+[0.073s] [35m[1mConsolidate compiler generated dependencies of target arm2[0m
+[0.075s] [35m[1mConsolidate compiler generated dependencies of target OFFF[0m
+[0.126s] [ 25%] Built target arm2
+[0.131s] [ 50%] Built target mis1
+[0.134s] [ 75%] Built target offboard
+[0.135s] [ 87%] [32mBuilding CXX object CMakeFiles/OFFF.dir/src/OFFBOARD_NODE.cpp.o[0m
+[4.224s] [01m[K/home/vaderplz/px4_ws/src/px4_controller/src/OFFBOARD_NODE.cpp:53:5:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Kif[m[K’
+[4.224s]    53 |     [01;31m[Kif[m[K (rclcpp::spin_until_future_complete(this->get_node_base_interface(), arming_future) == rclcpp::FutureReturnCode::SUCCESS) {
+[4.224s]       |     [01;31m[K^~[m[K
+[4.224s] [01m[K/home/vaderplz/px4_ws/src/px4_controller/src/OFFBOARD_NODE.cpp:59:7:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Kelse[m[K’
+[4.224s]    59 |     } [01;31m[Kelse[m[K {
+[4.224s]       |       [01;31m[K^~~~[m[K
+[4.224s] [01m[K/home/vaderplz/px4_ws/src/px4_controller/src/OFFBOARD_NODE.cpp:60:77:[m[K [01;31m[Kerror: [m[Kexpected declaration before ‘[01m[K}[m[K’ token
+[4.224s]    60 |         RCLCPP_ERROR(this->get_logger(), "Failed to call arming service.");}[01;31m[K}[m[K
+[4.224s]       |                                                                             [01;31m[K^[m[K
+[5.928s] gmake[2]: *** [CMakeFiles/OFFF.dir/build.make:76: CMakeFiles/OFFF.dir/src/OFFBOARD_NODE.cpp.o] Error 1
+[5.929s] gmake[1]: *** [CMakeFiles/Makefile2:221: CMakeFiles/OFFF.dir/all] Error 2
+[5.929s] gmake: *** [Makefile:146: all] Error 2
+[5.933s] Invoked command in '/home/vaderplz/px4_ws/src/px4_controller/build/px4_controller' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/vaderplz/ws_offboard_control/install/px4_offboard:/opt/ros/humble /usr/bin/cmake --build /home/vaderplz/px4_ws/src/px4_controller/build/px4_controller -- -j8 -l8

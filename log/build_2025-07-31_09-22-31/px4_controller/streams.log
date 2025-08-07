@@ -1,0 +1,29 @@
+[0.017s] Invoking command in '/home/vaderplz/px4_ws/src/px4_controller/build/px4_controller': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/vaderplz/ws_offboard_control/install/px4_offboard:/opt/ros/humble /usr/bin/cmake --build /home/vaderplz/px4_ws/src/px4_controller/build/px4_controller -- -j8 -l8
+[0.080s] [35m[1mConsolidate compiler generated dependencies of target OFFF[0m
+[0.107s] [ 25%] Built target mis1
+[0.107s] [ 50%] Built target offboard
+[0.110s] [ 75%] Built target arm2
+[0.116s] [100%] Built target OFFF
+[0.133s] Invoked command in '/home/vaderplz/px4_ws/src/px4_controller/build/px4_controller' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/vaderplz/ws_offboard_control/install/px4_offboard:/opt/ros/humble /usr/bin/cmake --build /home/vaderplz/px4_ws/src/px4_controller/build/px4_controller -- -j8 -l8
+[0.147s] Invoking command in '/home/vaderplz/px4_ws/src/px4_controller/build/px4_controller': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/vaderplz/ws_offboard_control/install/px4_offboard:/opt/ros/humble /usr/bin/cmake --install /home/vaderplz/px4_ws/src/px4_controller/build/px4_controller
+[0.156s] -- Install configuration: ""
+[0.156s] -- Up-to-date: /home/vaderplz/px4_ws/src/px4_controller/install/px4_controller/lib/px4_controller/offboard
+[0.157s] -- Up-to-date: /home/vaderplz/px4_ws/src/px4_controller/install/px4_controller/lib/px4_controller/arm2
+[0.157s] -- Up-to-date: /home/vaderplz/px4_ws/src/px4_controller/install/px4_controller/lib/px4_controller/mis1
+[0.157s] -- Up-to-date: /home/vaderplz/px4_ws/src/px4_controller/install/px4_controller/lib/px4_controller/OFFF
+[0.157s] -- Up-to-date: /home/vaderplz/px4_ws/src/px4_controller/install/px4_controller/share/ament_index/resource_index/package_run_dependencies/px4_controller
+[0.158s] -- Up-to-date: /home/vaderplz/px4_ws/src/px4_controller/install/px4_controller/share/ament_index/resource_index/parent_prefix_path/px4_controller
+[0.158s] -- Up-to-date: /home/vaderplz/px4_ws/src/px4_controller/install/px4_controller/share/px4_controller/environment/ament_prefix_path.sh
+[0.158s] -- Up-to-date: /home/vaderplz/px4_ws/src/px4_controller/install/px4_controller/share/px4_controller/environment/ament_prefix_path.dsv
+[0.158s] -- Up-to-date: /home/vaderplz/px4_ws/src/px4_controller/install/px4_controller/share/px4_controller/environment/path.sh
+[0.158s] -- Up-to-date: /home/vaderplz/px4_ws/src/px4_controller/install/px4_controller/share/px4_controller/environment/path.dsv
+[0.158s] -- Up-to-date: /home/vaderplz/px4_ws/src/px4_controller/install/px4_controller/share/px4_controller/local_setup.bash
+[0.158s] -- Up-to-date: /home/vaderplz/px4_ws/src/px4_controller/install/px4_controller/share/px4_controller/local_setup.sh
+[0.158s] -- Up-to-date: /home/vaderplz/px4_ws/src/px4_controller/install/px4_controller/share/px4_controller/local_setup.zsh
+[0.158s] -- Up-to-date: /home/vaderplz/px4_ws/src/px4_controller/install/px4_controller/share/px4_controller/local_setup.dsv
+[0.158s] -- Installing: /home/vaderplz/px4_ws/src/px4_controller/install/px4_controller/share/px4_controller/package.dsv
+[0.158s] -- Up-to-date: /home/vaderplz/px4_ws/src/px4_controller/install/px4_controller/share/ament_index/resource_index/packages/px4_controller
+[0.158s] -- Up-to-date: /home/vaderplz/px4_ws/src/px4_controller/install/px4_controller/share/px4_controller/cmake/px4_controllerConfig.cmake
+[0.159s] -- Up-to-date: /home/vaderplz/px4_ws/src/px4_controller/install/px4_controller/share/px4_controller/cmake/px4_controllerConfig-version.cmake
+[0.159s] -- Up-to-date: /home/vaderplz/px4_ws/src/px4_controller/install/px4_controller/share/px4_controller/package.xml
+[0.160s] Invoked command in '/home/vaderplz/px4_ws/src/px4_controller/build/px4_controller' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/vaderplz/ws_offboard_control/install/px4_offboard:/opt/ros/humble /usr/bin/cmake --install /home/vaderplz/px4_ws/src/px4_controller/build/px4_controller

@@ -1,0 +1,13 @@
+/home/vaderplz/px4_ws/src/px4_controller/build/px4_controller/CMakeFiles/uninstall.dir
+/home/vaderplz/px4_ws/src/px4_controller/build/px4_controller/CMakeFiles/px4_controller_uninstall.dir
+/home/vaderplz/px4_ws/src/px4_controller/build/px4_controller/CMakeFiles/offboard.dir
+/home/vaderplz/px4_ws/src/px4_controller/build/px4_controller/CMakeFiles/arm2.dir
+/home/vaderplz/px4_ws/src/px4_controller/build/px4_controller/CMakeFiles/mis1.dir
+/home/vaderplz/px4_ws/src/px4_controller/build/px4_controller/CMakeFiles/OFFF.dir
+/home/vaderplz/px4_ws/src/px4_controller/build/px4_controller/CMakeFiles/test.dir
+/home/vaderplz/px4_ws/src/px4_controller/build/px4_controller/CMakeFiles/edit_cache.dir
+/home/vaderplz/px4_ws/src/px4_controller/build/px4_controller/CMakeFiles/rebuild_cache.dir
+/home/vaderplz/px4_ws/src/px4_controller/build/px4_controller/CMakeFiles/list_install_components.dir
+/home/vaderplz/px4_ws/src/px4_controller/build/px4_controller/CMakeFiles/install.dir
+/home/vaderplz/px4_ws/src/px4_controller/build/px4_controller/CMakeFiles/install/local.dir
+/home/vaderplz/px4_ws/src/px4_controller/build/px4_controller/CMakeFiles/install/strip.dir

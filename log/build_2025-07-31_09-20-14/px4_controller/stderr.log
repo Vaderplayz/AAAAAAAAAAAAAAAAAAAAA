@@ -1,0 +1,17 @@
+[01m[K/home/vaderplz/px4_ws/src/px4_controller/src/OFFBOARD_NODE.cpp:53:9:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Kif[m[K’
+   53 |         [01;31m[Kif[m[K (rclcpp::spin_until_future_complete(this->get_node_base_interface(), arming_future) == rclcpp::FutureReturnCode::SUCCESS) {
+      |         [01;31m[K^~[m[K
+[01m[K/home/vaderplz/px4_ws/src/px4_controller/src/OFFBOARD_NODE.cpp:59:7:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Kelse[m[K’
+   59 |     } [01;31m[Kelse[m[K {
+      |       [01;31m[K^~~~[m[K
+[01m[K/home/vaderplz/px4_ws/src/px4_controller/src/OFFBOARD_NODE.cpp:60:77:[m[K [01;31m[Kerror: [m[Kexpected declaration before ‘[01m[K}[m[K’ token
+   60 |         RCLCPP_ERROR(this->get_logger(), "Failed to call arming service.");}[01;31m[K}[m[K
+      |                                                                             [01;31m[K^[m[K
+[01m[K/home/vaderplz/px4_ws/src/px4_controller/src/mission1.cpp:[m[K In member function ‘[01m[Kvoid OffboardControl::control_loop()[m[K’:
+[01m[K/home/vaderplz/px4_ws/src/px4_controller/src/mission1.cpp:75:16:[m[K [01;35m[Kwarning: [m[Kenumeration value ‘[01m[KSTREAMING_SETPOINTS[m[K’ not handled in switch [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wswitch-Wswitch]8;;[m[K]
+   75 |         switch [01;35m[K([m[Knode_state_) {
+      |                [01;35m[K^[m[K
+gmake[2]: *** [CMakeFiles/OFFF.dir/build.make:76: CMakeFiles/OFFF.dir/src/OFFBOARD_NODE.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:221: CMakeFiles/OFFF.dir/all] Error 2
+gmake[1]: *** Waiting for unfinished jobs....
+gmake: *** [Makefile:146: all] Error 2

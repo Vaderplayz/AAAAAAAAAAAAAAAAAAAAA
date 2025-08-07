@@ -1,0 +1,25 @@
+[35m[1mConsolidate compiler generated dependencies of target OFFF[0m
+[ 25%] Built target mis1
+[ 50%] Built target offboard
+[ 75%] Built target arm2
+[100%] Built target OFFF
+-- Install configuration: ""
+-- Up-to-date: /home/vaderplz/px4_ws/src/px4_controller/install/px4_controller/lib/px4_controller/offboard
+-- Up-to-date: /home/vaderplz/px4_ws/src/px4_controller/install/px4_controller/lib/px4_controller/arm2
+-- Up-to-date: /home/vaderplz/px4_ws/src/px4_controller/install/px4_controller/lib/px4_controller/mis1
+-- Up-to-date: /home/vaderplz/px4_ws/src/px4_controller/install/px4_controller/lib/px4_controller/OFFF
+-- Up-to-date: /home/vaderplz/px4_ws/src/px4_controller/install/px4_controller/share/ament_index/resource_index/package_run_dependencies/px4_controller
+-- Up-to-date: /home/vaderplz/px4_ws/src/px4_controller/install/px4_controller/share/ament_index/resource_index/parent_prefix_path/px4_controller
+-- Up-to-date: /home/vaderplz/px4_ws/src/px4_controller/install/px4_controller/share/px4_controller/environment/ament_prefix_path.sh
+-- Up-to-date: /home/vaderplz/px4_ws/src/px4_controller/install/px4_controller/share/px4_controller/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/vaderplz/px4_ws/src/px4_controller/install/px4_controller/share/px4_controller/environment/path.sh
+-- Up-to-date: /home/vaderplz/px4_ws/src/px4_controller/install/px4_controller/share/px4_controller/environment/path.dsv
+-- Up-to-date: /home/vaderplz/px4_ws/src/px4_controller/install/px4_controller/share/px4_controller/local_setup.bash
+-- Up-to-date: /home/vaderplz/px4_ws/src/px4_controller/install/px4_controller/share/px4_controller/local_setup.sh
+-- Up-to-date: /home/vaderplz/px4_ws/src/px4_controller/install/px4_controller/share/px4_controller/local_setup.zsh
+-- Up-to-date: /home/vaderplz/px4_ws/src/px4_controller/install/px4_controller/share/px4_controller/local_setup.dsv
+-- Installing: /home/vaderplz/px4_ws/src/px4_controller/install/px4_controller/share/px4_controller/package.dsv
+-- Up-to-date: /home/vaderplz/px4_ws/src/px4_controller/install/px4_controller/share/ament_index/resource_index/packages/px4_controller
+-- Up-to-date: /home/vaderplz/px4_ws/src/px4_controller/install/px4_controller/share/px4_controller/cmake/px4_controllerConfig.cmake
+-- Up-to-date: /home/vaderplz/px4_ws/src/px4_controller/install/px4_controller/share/px4_controller/cmake/px4_controllerConfig-version.cmake
+-- Up-to-date: /home/vaderplz/px4_ws/src/px4_controller/install/px4_controller/share/px4_controller/package.xml

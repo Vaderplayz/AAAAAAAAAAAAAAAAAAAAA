@@ -1,0 +1,129 @@
+[0.000000] (-) TimerEvent: {}
+[0.000761] (px4_controller) JobQueued: {'identifier': 'px4_controller', 'dependencies': OrderedDict()}
+[0.001201] (px4_controller) JobStarted: {'identifier': 'px4_controller'}
+[0.016161] (px4_controller) JobProgress: {'identifier': 'px4_controller', 'progress': 'cmake'}
+[0.017223] (px4_controller) JobProgress: {'identifier': 'px4_controller', 'progress': 'build'}
+[0.018154] (px4_controller) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/vaderplz/px4_ws/src/px4_controller/build/px4_controller', '--', '-j8', '-l8'], 'cwd': '/home/vaderplz/px4_ws/src/px4_controller/build/px4_controller', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'vi:en'), ('USER', 'vaderplz'), ('LC_TIME', 'vi_VN'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/vaderplz/px4_ws/install/mavros_extras/lib:/home/vaderplz/px4_ws/install/mavros/lib:/home/vaderplz/px4_ws/install/mavros_msgs/lib:/home/vaderplz/px4_ws/install/libmavconn/lib:/home/vaderplz/ros2_ws/install/turtlesim/lib:/home/vaderplz/ws_offboard_control/install/px4_ros_com/lib:/home/vaderplz/ws_offboard_control/install/px4_msgs/lib:/home/vaderplz/ros2_ws2/install/mavros_extras/lib:/home/vaderplz/ros2_ws2/install/mavros/lib:/home/vaderplz/ros2_ws2/install/mavros_msgs/lib:/home/vaderplz/ros2_ws2/install/libmavconn/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/vaderplz'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'vi_VN'), ('SYSTEMD_EXEC_PID', '2753'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/vaderplz/ws_offboard_control/install:/home/vaderplz/ros2_ws/install:/home/vaderplz/ros2_ws2/install:/home/vaderplz/px4_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'vaderplz'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/home/vaderplz/px4_ws/install/mavlink/lib/x86_64-linux-gnu/pkgconfig:/home/vaderplz/px4_ws/install/mavlink/lib/pkgconfig:/home/vaderplz/ros2_ws2/install/mavlink/lib/x86_64-linux-gnu/pkgconfig:/home/vaderplz/ros2_ws2/install/mavlink/lib/pkgconfig'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'vaderplz'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/vaderplz/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/vaderplz/.local/bin:/home/vaderplz/.local/bin'), ('SESSION_MANAGER', 'local/vaderplz-Inspiron-3501:@/tmp/.ICE-unix/924,unix/vaderplz-Inspiron-3501:/tmp/.ICE-unix/924'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'vi_VN'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/e0cfc797_393e_4381_9b83_1ab04728cc96'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'vi_VN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'vi_VN'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.M4ZEA3'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.130'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/vaderplz/px4_ws/install/px4_controller:/home/vaderplz/px4_ws/install/mavros_extras:/home/vaderplz/px4_ws/install/mavros:/home/vaderplz/px4_ws/install/mavros_msgs:/home/vaderplz/px4_ws/install/libmavconn:/home/vaderplz/ros2_ws/install/pid_controller:/home/vaderplz/ros2_ws/install/turtlesim:/home/vaderplz/ros2_ws/install/spawn_turtles:/home/vaderplz/ros2_ws/install/px4_controller:/home/vaderplz/ros2_ws/install/hardcode:/home/vaderplz/ros2_ws/install/cpp_srvcli:/home/vaderplz/ws_offboard_control/install/px4_ros_com:/home/vaderplz/ws_offboard_control/install/px4_offboard:/home/vaderplz/ws_offboard_control/install/px4_msgs:/home/vaderplz/ros2_ws2/install/mavros_extras:/home/vaderplz/ros2_ws2/install/mavros:/home/vaderplz/ros2_ws2/install/mavros_msgs:/home/vaderplz/ros2_ws2/install/libmavconn:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'vi_VN'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'vi_VN'), ('LC_IDENTIFICATION', 'vi_VN'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/vaderplz/px4_ws/src/px4_controller/build/px4_controller'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/vaderplz/px4_ws/install/mavros/local/lib/python3.10/dist-packages:/home/vaderplz/px4_ws/install/mavros_msgs/local/lib/python3.10/dist-packages:/home/vaderplz/ros2_ws/install/turtlesim/local/lib/python3.10/dist-packages:/home/vaderplz/ws_offboard_control/install/px4_ros_com/local/lib/python3.10/dist-packages:/home/vaderplz/ws_offboard_control/install/px4_offboard/lib/python3.10/site-packages:/home/vaderplz/ws_offboard_control/install/px4_msgs/local/lib/python3.10/dist-packages:/home/vaderplz/ros2_ws2/install/mavros/local/lib/python3.10/dist-packages:/home/vaderplz/ros2_ws2/install/mavros_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'vi_VN'), ('LC_PAPER', 'vi_VN'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/vaderplz/px4_ws/install/px4_controller:/home/vaderplz/px4_ws/install/mavros_extras:/home/vaderplz/px4_ws/install/mavros:/home/vaderplz/px4_ws/install/mavros_msgs:/home/vaderplz/px4_ws/install/libmavconn:/home/vaderplz/px4_ws/install/mavlink:/home/vaderplz/ros2_ws/install/pid_controller:/home/vaderplz/ros2_ws/install/turtlesim:/home/vaderplz/ros2_ws/install/spawn_turtles:/home/vaderplz/ros2_ws/install/px4_controller:/home/vaderplz/ros2_ws/install/hardcode:/home/vaderplz/ros2_ws/install/cpp_srvcli:/home/vaderplz/ws_offboard_control/install/px4_ros_com:/home/vaderplz/ws_offboard_control/install/px4_msgs:/home/vaderplz/ros2_ws2/install/mavros_extras:/home/vaderplz/ros2_ws2/install/mavros:/home/vaderplz/ros2_ws2/install/mavros_msgs:/home/vaderplz/ros2_ws2/install/libmavconn:/home/vaderplz/ros2_ws2/install/mavlink:/home/vaderplz/ws_offboard_control/install/px4_offboard:/opt/ros/humble')]), 'shell': False}
+[0.085984] (px4_controller) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target OFFF\x1b[0m\n'}
+[0.099988] (-) TimerEvent: {}
+[0.122752] (px4_controller) StdoutLine: {'line': b'[ 12%] \x1b[32mBuilding CXX object CMakeFiles/OFFF.dir/src/OFFBOARD_NODE.cpp.o\x1b[0m\n'}
+[0.138331] (px4_controller) StdoutLine: {'line': b'[ 37%] Built target arm2\n'}
+[0.154546] (px4_controller) StdoutLine: {'line': b'[ 62%] Built target offboard\n'}
+[0.167660] (px4_controller) StdoutLine: {'line': b'[ 87%] Built target mis1\n'}
+[0.200209] (-) TimerEvent: {}
+[0.300767] (-) TimerEvent: {}
+[0.401419] (-) TimerEvent: {}
+[0.501755] (-) TimerEvent: {}
+[0.602122] (-) TimerEvent: {}
+[0.702651] (-) TimerEvent: {}
+[0.803013] (-) TimerEvent: {}
+[0.903365] (-) TimerEvent: {}
+[1.003684] (-) TimerEvent: {}
+[1.104105] (-) TimerEvent: {}
+[1.204996] (-) TimerEvent: {}
+[1.305651] (-) TimerEvent: {}
+[1.406273] (-) TimerEvent: {}
+[1.506970] (-) TimerEvent: {}
+[1.607395] (-) TimerEvent: {}
+[1.707774] (-) TimerEvent: {}
+[1.808136] (-) TimerEvent: {}
+[1.908513] (-) TimerEvent: {}
+[2.008923] (-) TimerEvent: {}
+[2.109266] (-) TimerEvent: {}
+[2.209621] (-) TimerEvent: {}
+[2.310000] (-) TimerEvent: {}
+[2.410563] (-) TimerEvent: {}
+[2.510896] (-) TimerEvent: {}
+[2.611295] (-) TimerEvent: {}
+[2.711753] (-) TimerEvent: {}
+[2.812180] (-) TimerEvent: {}
+[2.912800] (-) TimerEvent: {}
+[3.013164] (-) TimerEvent: {}
+[3.113534] (-) TimerEvent: {}
+[3.214058] (-) TimerEvent: {}
+[3.314476] (-) TimerEvent: {}
+[3.415087] (-) TimerEvent: {}
+[3.515470] (-) TimerEvent: {}
+[3.615817] (-) TimerEvent: {}
+[3.716154] (-) TimerEvent: {}
+[3.816498] (-) TimerEvent: {}
+[3.916903] (-) TimerEvent: {}
+[4.017285] (-) TimerEvent: {}
+[4.117610] (-) TimerEvent: {}
+[4.217903] (-) TimerEvent: {}
+[4.318212] (-) TimerEvent: {}
+[4.418518] (-) TimerEvent: {}
+[4.518868] (-) TimerEvent: {}
+[4.619176] (-) TimerEvent: {}
+[4.719569] (-) TimerEvent: {}
+[4.820081] (-) TimerEvent: {}
+[4.920398] (-) TimerEvent: {}
+[5.020673] (-) TimerEvent: {}
+[5.120999] (-) TimerEvent: {}
+[5.221330] (-) TimerEvent: {}
+[5.321638] (-) TimerEvent: {}
+[5.422011] (-) TimerEvent: {}
+[5.522395] (-) TimerEvent: {}
+[5.622756] (-) TimerEvent: {}
+[5.723077] (-) TimerEvent: {}
+[5.823462] (-) TimerEvent: {}
+[5.923870] (-) TimerEvent: {}
+[6.024263] (-) TimerEvent: {}
+[6.124753] (-) TimerEvent: {}
+[6.225171] (-) TimerEvent: {}
+[6.325727] (-) TimerEvent: {}
+[6.426109] (-) TimerEvent: {}
+[6.526467] (-) TimerEvent: {}
+[6.627211] (-) TimerEvent: {}
+[6.727555] (-) TimerEvent: {}
+[6.827906] (-) TimerEvent: {}
+[6.928256] (-) TimerEvent: {}
+[7.029243] (-) TimerEvent: {}
+[7.129749] (-) TimerEvent: {}
+[7.230294] (-) TimerEvent: {}
+[7.330763] (-) TimerEvent: {}
+[7.431191] (-) TimerEvent: {}
+[7.531972] (-) TimerEvent: {}
+[7.632356] (-) TimerEvent: {}
+[7.732818] (-) TimerEvent: {}
+[7.833389] (-) TimerEvent: {}
+[7.933765] (-) TimerEvent: {}
+[8.034146] (-) TimerEvent: {}
+[8.134486] (-) TimerEvent: {}
+[8.153344] (px4_controller) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable OFFF\x1b[0m\n'}
+[8.234651] (-) TimerEvent: {}
+[8.335101] (-) TimerEvent: {}
+[8.435458] (-) TimerEvent: {}
+[8.535871] (-) TimerEvent: {}
+[8.571673] (px4_controller) StdoutLine: {'line': b'[100%] Built target OFFF\n'}
+[8.586786] (px4_controller) CommandEnded: {'returncode': 0}
+[8.587662] (px4_controller) JobProgress: {'identifier': 'px4_controller', 'progress': 'install'}
+[8.598872] (px4_controller) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/vaderplz/px4_ws/src/px4_controller/build/px4_controller'], 'cwd': '/home/vaderplz/px4_ws/src/px4_controller/build/px4_controller', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'vi:en'), ('USER', 'vaderplz'), ('LC_TIME', 'vi_VN'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/vaderplz/px4_ws/install/mavros_extras/lib:/home/vaderplz/px4_ws/install/mavros/lib:/home/vaderplz/px4_ws/install/mavros_msgs/lib:/home/vaderplz/px4_ws/install/libmavconn/lib:/home/vaderplz/ros2_ws/install/turtlesim/lib:/home/vaderplz/ws_offboard_control/install/px4_ros_com/lib:/home/vaderplz/ws_offboard_control/install/px4_msgs/lib:/home/vaderplz/ros2_ws2/install/mavros_extras/lib:/home/vaderplz/ros2_ws2/install/mavros/lib:/home/vaderplz/ros2_ws2/install/mavros_msgs/lib:/home/vaderplz/ros2_ws2/install/libmavconn/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/vaderplz'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'vi_VN'), ('SYSTEMD_EXEC_PID', '2753'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/vaderplz/ws_offboard_control/install:/home/vaderplz/ros2_ws/install:/home/vaderplz/ros2_ws2/install:/home/vaderplz/px4_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'vaderplz'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/home/vaderplz/px4_ws/install/mavlink/lib/x86_64-linux-gnu/pkgconfig:/home/vaderplz/px4_ws/install/mavlink/lib/pkgconfig:/home/vaderplz/ros2_ws2/install/mavlink/lib/x86_64-linux-gnu/pkgconfig:/home/vaderplz/ros2_ws2/install/mavlink/lib/pkgconfig'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'vaderplz'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/vaderplz/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/vaderplz/.local/bin:/home/vaderplz/.local/bin'), ('SESSION_MANAGER', 'local/vaderplz-Inspiron-3501:@/tmp/.ICE-unix/924,unix/vaderplz-Inspiron-3501:/tmp/.ICE-unix/924'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'vi_VN'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/e0cfc797_393e_4381_9b83_1ab04728cc96'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'vi_VN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'vi_VN'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.M4ZEA3'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.130'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/vaderplz/px4_ws/install/px4_controller:/home/vaderplz/px4_ws/install/mavros_extras:/home/vaderplz/px4_ws/install/mavros:/home/vaderplz/px4_ws/install/mavros_msgs:/home/vaderplz/px4_ws/install/libmavconn:/home/vaderplz/ros2_ws/install/pid_controller:/home/vaderplz/ros2_ws/install/turtlesim:/home/vaderplz/ros2_ws/install/spawn_turtles:/home/vaderplz/ros2_ws/install/px4_controller:/home/vaderplz/ros2_ws/install/hardcode:/home/vaderplz/ros2_ws/install/cpp_srvcli:/home/vaderplz/ws_offboard_control/install/px4_ros_com:/home/vaderplz/ws_offboard_control/install/px4_offboard:/home/vaderplz/ws_offboard_control/install/px4_msgs:/home/vaderplz/ros2_ws2/install/mavros_extras:/home/vaderplz/ros2_ws2/install/mavros:/home/vaderplz/ros2_ws2/install/mavros_msgs:/home/vaderplz/ros2_ws2/install/libmavconn:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'vi_VN'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'vi_VN'), ('LC_IDENTIFICATION', 'vi_VN'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/vaderplz/px4_ws/src/px4_controller/build/px4_controller'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/vaderplz/px4_ws/install/mavros/local/lib/python3.10/dist-packages:/home/vaderplz/px4_ws/install/mavros_msgs/local/lib/python3.10/dist-packages:/home/vaderplz/ros2_ws/install/turtlesim/local/lib/python3.10/dist-packages:/home/vaderplz/ws_offboard_control/install/px4_ros_com/local/lib/python3.10/dist-packages:/home/vaderplz/ws_offboard_control/install/px4_offboard/lib/python3.10/site-packages:/home/vaderplz/ws_offboard_control/install/px4_msgs/local/lib/python3.10/dist-packages:/home/vaderplz/ros2_ws2/install/mavros/local/lib/python3.10/dist-packages:/home/vaderplz/ros2_ws2/install/mavros_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'vi_VN'), ('LC_PAPER', 'vi_VN'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/vaderplz/px4_ws/install/px4_controller:/home/vaderplz/px4_ws/install/mavros_extras:/home/vaderplz/px4_ws/install/mavros:/home/vaderplz/px4_ws/install/mavros_msgs:/home/vaderplz/px4_ws/install/libmavconn:/home/vaderplz/px4_ws/install/mavlink:/home/vaderplz/ros2_ws/install/pid_controller:/home/vaderplz/ros2_ws/install/turtlesim:/home/vaderplz/ros2_ws/install/spawn_turtles:/home/vaderplz/ros2_ws/install/px4_controller:/home/vaderplz/ros2_ws/install/hardcode:/home/vaderplz/ros2_ws/install/cpp_srvcli:/home/vaderplz/ws_offboard_control/install/px4_ros_com:/home/vaderplz/ws_offboard_control/install/px4_msgs:/home/vaderplz/ros2_ws2/install/mavros_extras:/home/vaderplz/ros2_ws2/install/mavros:/home/vaderplz/ros2_ws2/install/mavros_msgs:/home/vaderplz/ros2_ws2/install/libmavconn:/home/vaderplz/ros2_ws2/install/mavlink:/home/vaderplz/ws_offboard_control/install/px4_offboard:/opt/ros/humble')]), 'shell': False}
+[8.608447] (px4_controller) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[8.608617] (px4_controller) StdoutLine: {'line': b'-- Installing: /home/vaderplz/px4_ws/src/px4_controller/install/px4_controller/lib/px4_controller/offboard\n'}
+[8.609043] (px4_controller) StdoutLine: {'line': b'-- Set runtime path of "/home/vaderplz/px4_ws/src/px4_controller/install/px4_controller/lib/px4_controller/offboard" to ""\n'}
+[8.609472] (px4_controller) StdoutLine: {'line': b'-- Installing: /home/vaderplz/px4_ws/src/px4_controller/install/px4_controller/lib/px4_controller/arm2\n'}
+[8.610037] (px4_controller) StdoutLine: {'line': b'-- Set runtime path of "/home/vaderplz/px4_ws/src/px4_controller/install/px4_controller/lib/px4_controller/arm2" to ""\n'}
+[8.610157] (px4_controller) StdoutLine: {'line': b'-- Installing: /home/vaderplz/px4_ws/src/px4_controller/install/px4_controller/lib/px4_controller/mis1\n'}
+[8.613667] (px4_controller) StdoutLine: {'line': b'-- Set runtime path of "/home/vaderplz/px4_ws/src/px4_controller/install/px4_controller/lib/px4_controller/mis1" to ""\n'}
+[8.613850] (px4_controller) StdoutLine: {'line': b'-- Installing: /home/vaderplz/px4_ws/src/px4_controller/install/px4_controller/lib/px4_controller/OFFF\n'}
+[8.615026] (px4_controller) StdoutLine: {'line': b'-- Set runtime path of "/home/vaderplz/px4_ws/src/px4_controller/install/px4_controller/lib/px4_controller/OFFF" to ""\n'}
+[8.615306] (px4_controller) StdoutLine: {'line': b'-- Installing: /home/vaderplz/px4_ws/src/px4_controller/install/px4_controller/share/ament_index/resource_index/package_run_dependencies/px4_controller\n'}
+[8.615492] (px4_controller) StdoutLine: {'line': b'-- Installing: /home/vaderplz/px4_ws/src/px4_controller/install/px4_controller/share/ament_index/resource_index/parent_prefix_path/px4_controller\n'}
+[8.615705] (px4_controller) StdoutLine: {'line': b'-- Installing: /home/vaderplz/px4_ws/src/px4_controller/install/px4_controller/share/px4_controller/environment/ament_prefix_path.sh\n'}
+[8.615842] (px4_controller) StdoutLine: {'line': b'-- Installing: /home/vaderplz/px4_ws/src/px4_controller/install/px4_controller/share/px4_controller/environment/ament_prefix_path.dsv\n'}
+[8.616080] (px4_controller) StdoutLine: {'line': b'-- Installing: /home/vaderplz/px4_ws/src/px4_controller/install/px4_controller/share/px4_controller/environment/path.sh\n'}
+[8.616241] (px4_controller) StdoutLine: {'line': b'-- Installing: /home/vaderplz/px4_ws/src/px4_controller/install/px4_controller/share/px4_controller/environment/path.dsv\n'}
+[8.616303] (px4_controller) StdoutLine: {'line': b'-- Installing: /home/vaderplz/px4_ws/src/px4_controller/install/px4_controller/share/px4_controller/local_setup.bash\n'}
+[8.616354] (px4_controller) StdoutLine: {'line': b'-- Installing: /home/vaderplz/px4_ws/src/px4_controller/install/px4_controller/share/px4_controller/local_setup.sh\n'}
+[8.616453] (px4_controller) StdoutLine: {'line': b'-- Installing: /home/vaderplz/px4_ws/src/px4_controller/install/px4_controller/share/px4_controller/local_setup.zsh\n'}
+[8.616536] (px4_controller) StdoutLine: {'line': b'-- Installing: /home/vaderplz/px4_ws/src/px4_controller/install/px4_controller/share/px4_controller/local_setup.dsv\n'}
+[8.616645] (px4_controller) StdoutLine: {'line': b'-- Installing: /home/vaderplz/px4_ws/src/px4_controller/install/px4_controller/share/px4_controller/package.dsv\n'}
+[8.616710] (px4_controller) StdoutLine: {'line': b'-- Installing: /home/vaderplz/px4_ws/src/px4_controller/install/px4_controller/share/ament_index/resource_index/packages/px4_controller\n'}
+[8.616851] (px4_controller) StdoutLine: {'line': b'-- Installing: /home/vaderplz/px4_ws/src/px4_controller/install/px4_controller/share/px4_controller/cmake/px4_controllerConfig.cmake\n'}
+[8.617021] (px4_controller) StdoutLine: {'line': b'-- Installing: /home/vaderplz/px4_ws/src/px4_controller/install/px4_controller/share/px4_controller/cmake/px4_controllerConfig-version.cmake\n'}
+[8.617145] (px4_controller) StdoutLine: {'line': b'-- Installing: /home/vaderplz/px4_ws/src/px4_controller/install/px4_controller/share/px4_controller/package.xml\n'}
+[8.618956] (px4_controller) CommandEnded: {'returncode': 0}
+[8.635966] (-) TimerEvent: {}
+[8.640038] (px4_controller) JobEnded: {'identifier': 'px4_controller', 'rc': 0}
+[8.640927] (-) EventReactorShutdown: {}
