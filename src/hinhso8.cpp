@@ -1,4 +1,3 @@
-
 #include "rclcpp/rclcpp.hpp"
 #include "mavros_msgs/srv/set_mode.hpp"
 #include "mavros_msgs/srv/command_bool.hpp"
@@ -41,6 +40,8 @@ public:
     return;
 }
         
+
+
 }
 private:
     rclcpp::TimerBase::SharedPtr timer_;
@@ -63,13 +64,13 @@ private:
     bool reachedHeight = false;
     float altitude;
     float target = 10;
-    float R = 5; //Circling radius
-    float omega = 1; //rad/s; angular velocity
+    float A = 4;
+    float omega = 0.1; //rad/s; angular velocity
     float laps = 1;
     bool finished= false;
     float max_velocity = 2.0;  // m/s
-    double limited_omega = std::min(omega, max_velocity / R);
-    int fly_time = static_cast<int>((2 * laps * M_PI) / limited_omega) + 1;
+    double limited_omega = std::min(omega, max_velocity / (2*A));
+    int fly_time = 50 ;//static_cast<int>((2 * laps * M_PI) / limited_omega) + 1;
     float vz = 1.5;
     int landing_time = target / vz;
     bool landing_mode_started = false;
@@ -138,23 +139,21 @@ void OffboardControl::publish_takeoff_setpoint() {
             auto setpoint_msg = mavros_msgs::msg::PositionTarget();
             setpoint_msg.header.stamp = this->get_clock()->now();
             setpoint_msg.coordinate_frame = mavros_msgs::msg::PositionTarget::FRAME_LOCAL_NED;
-            // Recalculate velocity with limited omega
-double vx = limited_omega * R * sin(limited_omega * t);
-double vy = limited_omega * R * cos(limited_omega * t);
+            if (finished && !landing_mode_started) {
+    setAUTO();
+    landing_mode_started = true;
+    return;  // stop publishing setpoints
+}
+if (landing_mode_started) return; // prevent further publishing
+// Limit omega based on max linear velocity
 
-            if (finished && altitude <= 0.2) {
-                setpoint_msg.type_mask = mavros_msgs::msg::PositionTarget::IGNORE_PX |
-                                        mavros_msgs::msg::PositionTarget::IGNORE_PY |
-                                        mavros_msgs::msg::PositionTarget::IGNORE_PZ |
-                                        mavros_msgs::msg::PositionTarget::IGNORE_AFX |
-                                        mavros_msgs::msg::PositionTarget::IGNORE_AFY |
-                                        mavros_msgs::msg::PositionTarget::IGNORE_AFZ |
-                                        mavros_msgs::msg::PositionTarget::IGNORE_YAW_RATE;
-                setpoint_msg.velocity.x = 0;
-                setpoint_msg.velocity.y = 0;
-                setpoint_msg.velocity.z = -3;
-            }
-            else if (finished){
+
+// Recalculate velocity with limited omega
+double vx = -A * sin(omega * t) * sqrt(1 - pow(sin(omega * t), 2));
+double vy = A * (pow(cos(omega * t), 2) - pow(sin(omega * t), 2));
+
+
+            if (finished){
                 setpoint_msg.type_mask = mavros_msgs::msg::PositionTarget::IGNORE_VX |
                                         mavros_msgs::msg::PositionTarget::IGNORE_VY |
                                         mavros_msgs::msg::PositionTarget::IGNORE_VZ |
@@ -216,23 +215,30 @@ void OffboardControl::callback(const mavros_msgs::msg::Altitude::SharedPtr msg) 
     }
 
 
+    if (landing_mode_started && altitude < 0.15 && !already_disarmed) {
+    disarm();
+    already_disarmed = true;
+    RCLCPP_INFO(this->get_logger(), "Drone landed and disarmed.");
+}
 
-//     if (finished && !land_timer_started) {
-//     land_timer_started = true;
-//     land_timer_ = this->create_wall_timer(
-//     std::chrono::seconds(landing_time),
-//     [this]() {
-//         if (!already_disarmed) {
-//             disarm();
-//             already_disarmed = true;
-//             RCLCPP_INFO(this->get_logger(), "disarmed (timer)");
-//         }
-//         land_timer_->cancel();  // stop the timer after it's done
-//     }
-// );
-//     RCLCPP_INFO(this->get_logger(), "Altitude: %.2f, Target: %.2f, ReachedHeight: %s",
-//                 altitude, target, reachedHeight ? "true" : "false");
-// }
+
+
+    if (finished && !land_timer_started) {
+    land_timer_started = true;
+    land_timer_ = this->create_wall_timer(
+    std::chrono::seconds(landing_time),
+    [this]() {
+        if (!already_disarmed) {
+            disarm();
+            already_disarmed = true;
+            RCLCPP_INFO(this->get_logger(), "disarmed (timer)");
+        }
+        land_timer_->cancel();  // stop the timer after it's done
+    }
+);
+    RCLCPP_INFO(this->get_logger(), "Altitude: %.2f, Target: %.2f, ReachedHeight: %s",
+                altitude, target, reachedHeight ? "true" : "false");
+}
 
 }
 void OffboardControl::setAUTO(){

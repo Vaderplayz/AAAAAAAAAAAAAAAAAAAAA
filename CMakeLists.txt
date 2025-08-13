@@ -58,6 +58,14 @@ ament_target_dependencies(offCIRCLE rclcpp mavros_msgs geometry_msgs )
 install(TARGETS offCIRCLE DESTINATION lib/${PROJECT_NAME})
 
 
+add_executable(8 src/hinhso8.cpp)
+ament_target_dependencies(8 rclcpp mavros_msgs geometry_msgs )
+install(TARGETS 8 DESTINATION lib/${PROJECT_NAME})
+
+
+add_executable(takeoff src/cathacanh.cpp)
+ament_target_dependencies(takeoff rclcpp mavros_msgs geometry_msgs )
+install(TARGETS takeoff DESTINATION lib/${PROJECT_NAME})
 
 
 ament_package()
