@@ -57,9 +57,7 @@ private:
     void callback(const mavros_msgs::msg::Altitude::SharedPtr msg);
     bool reachedHeight = false;
     float altitude;
-    float target = 5;
-    float R = 5; //Circling radius
-    float omega = 1; //rad/s; angular velocity
+    float target = 3;
     bool finished= false;
     int fly_time = 10;
     float vz = 1.5;

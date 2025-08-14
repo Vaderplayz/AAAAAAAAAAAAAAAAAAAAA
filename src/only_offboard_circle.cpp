@@ -156,6 +156,8 @@ double vy = limited_omega * R * cos(limited_omega * t);
             }
             else if (finished){
                 setpoint_msg.type_mask = mavros_msgs::msg::PositionTarget::IGNORE_VX |
+                                        mavros_msgs::msg::PositionTarget::IGNORE_PZ |
+
                                         mavros_msgs::msg::PositionTarget::IGNORE_VY |
                                         mavros_msgs::msg::PositionTarget::IGNORE_AFX |
                                         mavros_msgs::msg::PositionTarget::IGNORE_AFY |
@@ -163,7 +165,6 @@ double vy = limited_omega * R * cos(limited_omega * t);
                                         mavros_msgs::msg::PositionTarget::IGNORE_YAW_RATE;
                 setpoint_msg.position.x = 0;
                 setpoint_msg.position.y = 0;
-                setpoint_msg.position.z = 0;
                 setpoint_msg.velocity.z = -0.5;
 
             }
@@ -216,24 +217,6 @@ void OffboardControl::callback(const mavros_msgs::msg::Altitude::SharedPtr msg) 
         
     }
 
-
-
-//     if (finished && !land_timer_started) {
-//     land_timer_started = true;
-//     land_timer_ = this->create_wall_timer(
-//     std::chrono::seconds(landing_time),
-//     [this]() {
-//         if (!already_disarmed) {
-//             disarm();
-//             already_disarmed = true;
-//             RCLCPP_INFO(this->get_logger(), "disarmed (timer)");
-//         }
-//         land_timer_->cancel();  // stop the timer after it's done
-//     }
-// );
-//     RCLCPP_INFO(this->get_logger(), "Altitude: %.2f, Target: %.2f, ReachedHeight: %s",
-//                 altitude, target, reachedHeight ? "true" : "false");
-// }
 
 }
 void OffboardControl::setAUTO(){

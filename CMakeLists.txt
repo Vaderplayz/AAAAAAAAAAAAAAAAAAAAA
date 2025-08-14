@@ -29,7 +29,7 @@ install(TARGETS offboard DESTINATION lib/${PROJECT_NAME})
 
 
 add_executable(arm2 src/arm2.cpp)
-ament_target_dependencies(arm2 rclcpp mavros_msgs geometry_msgs)
+ament_target_dependencies(arm2 rclcpp mavros_msgs geometry_msgs )
 install(TARGETS arm2 DESTINATION lib/${PROJECT_NAME})
 
 add_executable(mis1 src/mission1.cpp)

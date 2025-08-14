@@ -63,19 +63,21 @@ private:
     void callback(const mavros_msgs::msg::Altitude::SharedPtr msg);
     bool reachedHeight = false;
     float altitude;
-    float target = 10;
-    float A = 4;
-    float omega = 0.1; //rad/s; angular velocity
+    float target = 5;
+    double A = 5;
+    double omega = 0.5; //rad/s; angular velocity
     float laps = 1;
     bool finished= false;
-    float max_velocity = 2.0;  // m/s
-    double limited_omega = std::min(omega, max_velocity / (2*A));
-    int fly_time = 50 ;//static_cast<int>((2 * laps * M_PI) / limited_omega) + 1;
+    double max_velocity = 1.5;  // m/s
+    double limited_omega = std::min(omega, max_velocity / (A*sqrt(2)));
+    int fly_time = 2*M_PI / limited_omega ;
     float vz = 1.5;
     int landing_time = target / vz;
     bool landing_mode_started = false;
     bool land_timer_started = false;
     bool already_disarmed = false;
+    float vx = 0;
+    float vy = 0;
 }; 
 
 void OffboardControl::arm(){
@@ -97,25 +99,6 @@ void OffboardControl::arm(){
     } else {
         RCLCPP_ERROR(this->get_logger(), "Failed to call arming service.");}}
         
-
-void OffboardControl::disarm(){
-        auto arming_request = std::make_shared<mavros_msgs::srv::CommandBool::Request>();
-        arming_request->value = false; // true to arm, false to disarm
-        auto arming_future = arming_client_->async_send_request(arming_request);
-        while (!arming_client_->wait_for_service(1s) && rclcpp::ok()) {
-    RCLCPP_INFO(this->get_logger(), "Waiting for /mavros/cmd/arming service...");
-}
-
-
-    // Spin and wait for the arming result
-        if (rclcpp::spin_until_future_complete(this->get_node_base_interface(), arming_future) == rclcpp::FutureReturnCode::SUCCESS) {
-        if (arming_future.get()->success) {
-            RCLCPP_INFO(this->get_logger(), "Drone DISARMED successfully!");
-        } else {
-            RCLCPP_ERROR(this->get_logger(), "Failed to disarm drone.");
-    }
-    } else {
-        RCLCPP_ERROR(this->get_logger(), "Failed to call disarming service.");}}
 
 void OffboardControl::setOffboard(){
         auto request1 = std::make_shared<mavros_msgs::srv::SetMode::Request>();
@@ -139,31 +122,37 @@ void OffboardControl::publish_takeoff_setpoint() {
             auto setpoint_msg = mavros_msgs::msg::PositionTarget();
             setpoint_msg.header.stamp = this->get_clock()->now();
             setpoint_msg.coordinate_frame = mavros_msgs::msg::PositionTarget::FRAME_LOCAL_NED;
-            if (finished && !landing_mode_started) {
-    setAUTO();
-    landing_mode_started = true;
-    return;  // stop publishing setpoints
-}
-if (landing_mode_started) return; // prevent further publishing
-// Limit omega based on max linear velocity
+            
+vx = A*limited_omega*cos(limited_omega*t);
+vy = A*limited_omega*cos(2*limited_omega*t);
 
 
-// Recalculate velocity with limited omega
-double vx = -A * sin(omega * t) * sqrt(1 - pow(sin(omega * t), 2));
-double vy = A * (pow(cos(omega * t), 2) - pow(sin(omega * t), 2));
-
-
-            if (finished){
+            if (finished && altitude <= 0.2) {
+                setpoint_msg.type_mask = mavros_msgs::msg::PositionTarget::IGNORE_PX |
+                                        mavros_msgs::msg::PositionTarget::IGNORE_PY |
+                                        mavros_msgs::msg::PositionTarget::IGNORE_PZ |
+                                        mavros_msgs::msg::PositionTarget::IGNORE_AFX |
+                                        mavros_msgs::msg::PositionTarget::IGNORE_AFY |
+                                        mavros_msgs::msg::PositionTarget::IGNORE_AFZ |
+                                        mavros_msgs::msg::PositionTarget::IGNORE_YAW_RATE;
+                setpoint_msg.velocity.x = 0;
+                setpoint_msg.velocity.y = 0;
+                setpoint_msg.velocity.z = -3;
+            }
+            else if (finished){
                 setpoint_msg.type_mask = mavros_msgs::msg::PositionTarget::IGNORE_VX |
-                                        mavros_msgs::msg::PositionTarget::IGNORE_VY |
-                                        mavros_msgs::msg::PositionTarget::IGNORE_VZ |
+                                        mavros_msgs::msg::PositionTarget::IGNORE_VY |                                        mavros_msgs::msg::PositionTarget::IGNORE_VY |
+                                        mavros_msgs::msg::PositionTarget::IGNORE_PZ |                                        mavros_msgs::msg::PositionTarget::IGNORE_VY |
+
+                                        
                                         mavros_msgs::msg::PositionTarget::IGNORE_AFX |
                                         mavros_msgs::msg::PositionTarget::IGNORE_AFY |
                                         mavros_msgs::msg::PositionTarget::IGNORE_AFZ |
                                         mavros_msgs::msg::PositionTarget::IGNORE_YAW_RATE;
                 setpoint_msg.position.x = 0;
                 setpoint_msg.position.y = 0;
-                setpoint_msg.position.z = 0;
+                setpoint_msg.velocity.z = -0.2;
+
             }
             else if (reachedHeight) {
                 // In offboard mode, publish velocity setpoints for circular motion
@@ -195,8 +184,11 @@ double vy = A * (pow(cos(omega * t), 2) - pow(sin(omega * t), 2));
     }
 
 
+
 void OffboardControl::callback(const mavros_msgs::msg::Altitude::SharedPtr msg) {
     altitude = msg->local;
+    RCLCPP_INFO(this->get_logger(),"vx=: %.2f, vy: %.2f", vx, vy);
+
 
     if (std::abs(altitude - target) <= 0.2 && !reachedHeight) {
         reachedHeight = true;
@@ -215,47 +207,8 @@ void OffboardControl::callback(const mavros_msgs::msg::Altitude::SharedPtr msg) 
     }
 
 
-    if (landing_mode_started && altitude < 0.15 && !already_disarmed) {
-    disarm();
-    already_disarmed = true;
-    RCLCPP_INFO(this->get_logger(), "Drone landed and disarmed.");
 }
 
-
-
-    if (finished && !land_timer_started) {
-    land_timer_started = true;
-    land_timer_ = this->create_wall_timer(
-    std::chrono::seconds(landing_time),
-    [this]() {
-        if (!already_disarmed) {
-            disarm();
-            already_disarmed = true;
-            RCLCPP_INFO(this->get_logger(), "disarmed (timer)");
-        }
-        land_timer_->cancel();  // stop the timer after it's done
-    }
-);
-    RCLCPP_INFO(this->get_logger(), "Altitude: %.2f, Target: %.2f, ReachedHeight: %s",
-                altitude, target, reachedHeight ? "true" : "false");
-}
-
-}
-void OffboardControl::setAUTO(){
-    auto request = std::make_shared<mavros_msgs::srv::SetMode::Request>();
-    request->custom_mode = "AUTO.LAND";
-    auto result_future = client1_->async_send_request(request);
-    if (rclcpp::spin_until_future_complete(this->get_node_base_interface(), result_future) ==
-        rclcpp::FutureReturnCode::SUCCESS) {
-        if (result_future.get()->mode_sent) {
-            RCLCPP_INFO(this->get_logger(), "AUTO.LAND mode sent to FCU");
-        } else {
-            RCLCPP_ERROR(this->get_logger(), "Failed to send AUTO.LAND mode");
-        }
-    } else {
-        RCLCPP_ERROR(this->get_logger(), "Service call to set mode failed");
-    }
-}
 
 int main(int argc, char *argv[]) {
     rclcpp::init(argc, argv);
