@@ -62,14 +62,14 @@ private:
     void callback(const mavros_msgs::msg::Altitude::SharedPtr msg);
     bool reachedHeight = false;
     float altitude;
-    float target = 10;
-    float R = 5; //Circling radius
+    float target = 5;
+    float R = 2; //Circling radius
     float omega = 1; //rad/s; angular velocity
-    float laps = 1;
+    float laps = 2;
     bool finished= false;
-    float max_velocity = 2.0;  // m/s
+    float max_velocity = 1.0;  // m/s
     double limited_omega = std::min(omega, max_velocity / R);
-    int fly_time = static_cast<int>((2 * laps * M_PI) / limited_omega) + 1;
+    int fly_time = static_cast<int>((2 * laps * M_PI) / limited_omega);
     float vz = 1.5;
     int landing_time = target / vz;
     bool landing_mode_started = false;
@@ -157,7 +157,6 @@ double vy = limited_omega * R * cos(limited_omega * t);
             else if (finished){
                 setpoint_msg.type_mask = mavros_msgs::msg::PositionTarget::IGNORE_VX |
                                         mavros_msgs::msg::PositionTarget::IGNORE_VY |
-                                        mavros_msgs::msg::PositionTarget::IGNORE_VZ |
                                         mavros_msgs::msg::PositionTarget::IGNORE_AFX |
                                         mavros_msgs::msg::PositionTarget::IGNORE_AFY |
                                         mavros_msgs::msg::PositionTarget::IGNORE_AFZ |
@@ -165,6 +164,8 @@ double vy = limited_omega * R * cos(limited_omega * t);
                 setpoint_msg.position.x = 0;
                 setpoint_msg.position.y = 0;
                 setpoint_msg.position.z = 0;
+                setpoint_msg.velocity.z = -0.5;
+
             }
             else if (reachedHeight) {
                 // In offboard mode, publish velocity setpoints for circular motion

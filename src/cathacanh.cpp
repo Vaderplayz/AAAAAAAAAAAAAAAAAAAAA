@@ -57,11 +57,11 @@ private:
     void callback(const mavros_msgs::msg::Altitude::SharedPtr msg);
     bool reachedHeight = false;
     float altitude;
-    float target = 10;
+    float target = 5;
     float R = 5; //Circling radius
     float omega = 1; //rad/s; angular velocity
     bool finished= false;
-    int fly_time = 5;
+    int fly_time = 10;
     float vz = 1.5;
 }; 
 
@@ -128,7 +128,7 @@ if (finished && altitude <= 0.2) {
                                         mavros_msgs::msg::PositionTarget::IGNORE_YAW_RATE;
                 setpoint_msg.velocity.x = 0;
                 setpoint_msg.velocity.y = 0;
-                setpoint_msg.velocity.z = 0; 
+                setpoint_msg.velocity.z = -0.5; 
             }
             else if (reachedHeight) {
                 setpoint_msg.type_mask = mavros_msgs::msg::PositionTarget::IGNORE_PX |
@@ -143,7 +143,6 @@ if (finished && altitude <= 0.2) {
                 setpoint_msg.velocity.z = 0; 
             }
              else {
-                // Before offboard mode, publish zero velocity to maintain position
                 setpoint_msg.type_mask = mavros_msgs::msg::PositionTarget::IGNORE_PX |
                                         mavros_msgs::msg::PositionTarget::IGNORE_PY |
                                         mavros_msgs::msg::PositionTarget::IGNORE_PZ |
