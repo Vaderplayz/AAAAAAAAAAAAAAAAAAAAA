@@ -64,7 +64,7 @@ private:
     bool reachedHeight = false;
     float altitude;
     float target = 5;
-    double A = 5;
+    double A = 2;
     double omega = 0.5; //rad/s; angular velocity
     float laps = 1;
     bool finished= false;
