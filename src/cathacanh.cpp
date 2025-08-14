@@ -158,7 +158,7 @@ if (finished && altitude <= 0.2) {
 
 
 void OffboardControl::callback(const mavros_msgs::msg::Altitude::SharedPtr msg) {
-    altitude = msg->local;
+    altitude = msg->relative;
 
     if (std::abs(altitude - target) <= 0.2 && !reachedHeight) {
         reachedHeight = true;

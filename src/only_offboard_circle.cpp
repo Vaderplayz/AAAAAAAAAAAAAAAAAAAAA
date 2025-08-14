@@ -199,7 +199,7 @@ double vy = limited_omega * R * cos(limited_omega * t);
 
 
 void OffboardControl::callback(const mavros_msgs::msg::Altitude::SharedPtr msg) {
-    altitude = msg->local;
+    altitude = msg->relative;
 
     if (std::abs(altitude - target) <= 0.2 && !reachedHeight) {
         reachedHeight = true;
