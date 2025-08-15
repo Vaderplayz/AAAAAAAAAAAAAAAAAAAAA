@@ -21,14 +21,18 @@ public:
         client1_ = this->create_client<mavros_msgs::srv::SetMode>("/mavros/set_mode");
         arming_client_ = this->create_client<mavros_msgs::srv::CommandBool>("/mavros/cmd/arming");
         setpoint_pub_ = this->create_publisher<mavros_msgs::msg::PositionTarget>("/mavros/setpoint_raw/local", 10);
-
+        subscription_pose_ = this->create_subscription<mavros_msgs::msg::Altitude>(
+            "/mavros/altitude",
+            qos,
+            std::bind(&OffboardControl::callback, this, std::placeholders::_1)
+        );
     
    RCLCPP_INFO(this->get_logger(), "Node initialized. Waiting for MAVROS connection...");
            // Start timer for periodic setpoint publishing
     timer_ = this->create_wall_timer(100ms, std::bind(&OffboardControl::publish_takeoff_setpoint, this));
     std::this_thread::sleep_for(std::chrono::seconds(3));   
     setOffboard();
-    arm();
+    // arm();
 
         
 
@@ -45,8 +49,7 @@ private:
     rclcpp::Time start_time;   // Time when motion starts}; 
     rclcpp::Subscription<mavros_msgs::msg::Altitude>::SharedPtr subscription_pose_;
     rclcpp::QoS qos = rclcpp::SensorDataQoS();
-
-    void arm();
+    void callback(const mavros_msgs::msg::Altitude::SharedPtr msg);    void arm();
     void setOffboard();
     void publish_takeoff_setpoint();
     bool reachedHeight = false;
@@ -113,6 +116,10 @@ void OffboardControl::publish_takeoff_setpoint() {
     
 }
 
+
+void OffboardControl::callback(const mavros_msgs::msg::Altitude::SharedPtr msg) {
+    altitude = msg->relative;
+    RCLCPP_INFO(this->get_logger(), " Altitude: %.2f", altitude);}
 
 int main(int argc, char *argv[]) {
     rclcpp::init(argc, argv);

@@ -33,7 +33,7 @@ public:
     timer_ = this->create_wall_timer(100ms, std::bind(&OffboardControl::publish_takeoff_setpoint, this));
     std::this_thread::sleep_for(std::chrono::seconds(3));   
     setOffboard();
-    arm();
+    // arm();
 
         
 
@@ -159,6 +159,8 @@ if (finished && altitude <= 0.2) {
 
 void OffboardControl::callback(const mavros_msgs::msg::Altitude::SharedPtr msg) {
     altitude = msg->relative;
+    RCLCPP_INFO(this->get_logger(), " Altitude: %.2f", altitude);
+
 
     if (std::abs(altitude - target) <= 0.2 && !reachedHeight) {
         reachedHeight = true;
