@@ -186,7 +186,7 @@ vy = A*limited_omega*cos(2*limited_omega*t);
 
 
 void OffboardControl::callback(const mavros_msgs::msg::Altitude::SharedPtr msg) {
-    altitude = msg->relative;
+    altitude = abs(msg->relative);
     RCLCPP_INFO(this->get_logger(),"vx=: %.2f, vy: %.2f", vx, vy);
         RCLCPP_INFO(this->get_logger(), " Altitude: %.2f", altitude);
 
