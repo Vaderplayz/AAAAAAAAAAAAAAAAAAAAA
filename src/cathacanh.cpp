@@ -3,7 +3,7 @@
 #include "mavros_msgs/srv/command_bool.hpp"
 #include "mavros_msgs/msg/position_target.hpp"
 #include "mavros_msgs/msg/altitude.hpp"
-// #include "mavros_msgs/CommandTOL.hpp"
+
 
 
 #include <memory>
@@ -33,7 +33,7 @@ public:
     timer_ = this->create_wall_timer(100ms, std::bind(&OffboardControl::publish_takeoff_setpoint, this));
     std::this_thread::sleep_for(std::chrono::seconds(3));   
     setOffboard();
-    // arm();
+    arm();
 
         
 
@@ -162,7 +162,7 @@ void OffboardControl::callback(const mavros_msgs::msg::Altitude::SharedPtr msg) 
     RCLCPP_INFO(this->get_logger(), " Altitude: %.2f", altitude);
 
 
-    if (std::abs(altitude - target) <= 0.2 && !reachedHeight) {
+    if ((std::abs(altitude - target) <= 0.2 || altitude > target) && !reachedHeight) {
         reachedHeight = true;
         RCLCPP_INFO(this->get_logger(), "Target height reached! Altitude: %.2f, Target: %.2f", altitude, target);
 

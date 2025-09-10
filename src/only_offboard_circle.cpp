@@ -1,10 +1,8 @@
-
 #include "rclcpp/rclcpp.hpp"
 #include "mavros_msgs/srv/set_mode.hpp"
 #include "mavros_msgs/srv/command_bool.hpp"
 #include "mavros_msgs/msg/position_target.hpp"
 #include "mavros_msgs/msg/altitude.hpp"
-// #include "mavros_msgs/CommandTOL.hpp"
 
 
 #include <memory>

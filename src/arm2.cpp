@@ -32,7 +32,7 @@ public:
     timer_ = this->create_wall_timer(100ms, std::bind(&OffboardControl::publish_takeoff_setpoint, this));
     std::this_thread::sleep_for(std::chrono::seconds(3));   
     setOffboard();
-    // arm();
+    arm();
 
         
 
