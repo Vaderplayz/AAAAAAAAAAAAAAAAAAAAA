@@ -201,7 +201,7 @@ void OffboardControl::callback(const mavros_msgs::msg::Altitude::SharedPtr msg) 
     RCLCPP_INFO(this->get_logger(), " Altitude: %.2f", altitude);
 
 
-    if (std::abs(altitude - target) <= 0.2 && !reachedHeight) {
+    if ((std::abs(altitude - target) <= 0.2 && !reachedHeight) || (altitude >=target&&!reachedHeight)) {
         reachedHeight = true;
         RCLCPP_INFO(this->get_logger(), "Target height reached! Altitude: %.2f, Target: %.2f", altitude, target);
 

@@ -91,7 +91,6 @@ void OffboardControl::setOffboard(){
     RCLCPP_INFO(this->get_logger(), "Waiting for /mavros/set_mode service...");
 }
 
-    // 6. Spin the Node until the future is complete. This is the key step.
         if (rclcpp::spin_until_future_complete(this->get_node_base_interface(), future_result1) == rclcpp::FutureReturnCode::SUCCESS)
         {
             if (future_result1.get()->mode_sent) {
@@ -162,8 +161,8 @@ void OffboardControl::callback(const mavros_msgs::msg::Altitude::SharedPtr msg) 
     RCLCPP_INFO(this->get_logger(), " Altitude: %.2f", altitude);
 
 
-    if ((std::abs(altitude - target) <= 0.2 || altitude > target) && !reachedHeight) {
-        reachedHeight = true;
+if ((std::abs(altitude - target) <= 0.2 && !reachedHeight) || (altitude >=target&&!reachedHeight)) {
+            reachedHeight = true;
         RCLCPP_INFO(this->get_logger(), "Target height reached! Altitude: %.2f, Target: %.2f", altitude, target);
 
         // Start the timer only once, when height is first reached
