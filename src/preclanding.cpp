@@ -230,22 +230,22 @@ void GetPose::ComputeTagPose() {
     double rollTag, pitchTag, yawTag;
     tf2::Matrix3x3(qTagInWorld).getRPY(rollTag, pitchTag, yawTag);
 
-    // Yaw error
-    double yaw_error = yawTag - yawDrone;
-    // while (yaw_error > M_PI) yaw_error -= 2*M_PI;
-    // while (yaw_error < -M_PI) yaw_error += 2*M_PI;
+    // // Yaw error
+    // double yaw_error = yawTag - yawDrone;
+    // // while (yaw_error > M_PI) yaw_error -= 2*M_PI;
+    // // while (yaw_error < -M_PI) yaw_error += 2*M_PI;
 
 
-    tf2::Quaternion q_desired;
-    q_desired.setRPY(rollDrone, pitchDrone, yawDrone + yaw_error);  // = yawTag
-    // q_desired.normalize();
+    //  tf2::Quaternion q_desired;
+    // q_desired.setRPY(rollTag, pitchTag, yawTag);  // = yawTag
+    // // // q_desired.normalize();
 
     // Debug info
     RCLCPP_INFO(this->get_logger(),
-        "Tag %s in world: [x=%.3f, y=%.3f, z=%.3f, roll=%.3f, pitch=%.3f, yaw=%.3f], yaw_drone=%.3f, yaw_error=%.3f",
+        "Tag %s in world: [x=%.3f, y=%.3f, z=%.3f, roll=%.3f, pitch=%.3f, yaw=%.3f], [x %.3f,y %.3f,z %.3f,w %.3f]",
         frame_child.c_str(),
         posTagInWorld.x(), posTagInWorld.y(), posTagInWorld.z(),
-        rollTag, pitchTag, yawTag,yawDrone,  yaw_error);
+        rollTag, pitchTag, yawTag, qTagInWorld.x(), qTagInWorld.y(), qTagInWorld.z(), qTagInWorld.w());
 
     // Publish landing_pose
     geometry_msgs::msg::PoseStamped landing_pose;
@@ -254,10 +254,10 @@ void GetPose::ComputeTagPose() {
     landing_pose.pose.position.x = posTagInWorld.x();
     landing_pose.pose.position.y = posTagInWorld.y();
     landing_pose.pose.position.z = posTagInWorld.z();
-    landing_pose.pose.orientation.x = q_desired.x();
-    landing_pose.pose.orientation.y = q_desired.y();
-    landing_pose.pose.orientation.z = q_desired.z();
-    landing_pose.pose.orientation.w = q_desired.w();
+    landing_pose.pose.orientation.x = qTagInWorld.x();
+    landing_pose.pose.orientation.y = qTagInWorld.y();
+    landing_pose.pose.orientation.z = qTagInWorld.z();
+    landing_pose.pose.orientation.w = qTagInWorld.w();
 
     landing_pose_pub_->publish(landing_pose);
 };
