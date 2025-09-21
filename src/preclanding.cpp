@@ -248,18 +248,20 @@ void GetPose::ComputeTagPose() {
         rollTag, pitchTag, yawTag, qTagInWorld.x(), qTagInWorld.y(), qTagInWorld.z(), qTagInWorld.w());
 
     // Publish landing_pose
-    geometry_msgs::msg::PoseStamped landing_pose;
-    landing_pose.header.stamp = this->now();
-    landing_pose.header.frame_id = "world";   // fixed world
-    landing_pose.pose.position.x = posTagInWorld.x();
-    landing_pose.pose.position.y = posTagInWorld.y();
-    landing_pose.pose.position.z = posTagInWorld.z();
-    landing_pose.pose.orientation.x = qTagInWorld.x();
-    landing_pose.pose.orientation.y = qTagInWorld.y();
-    landing_pose.pose.orientation.z = qTagInWorld.z();
-    landing_pose.pose.orientation.w = qTagInWorld.w();
+geometry_msgs::msg::PoseStamped landing_pose;
+landing_pose.header.stamp = this->now();
+landing_pose.header.frame_id = "world"; // ENU
 
-    landing_pose_pub_->publish(landing_pose);
+landing_pose.pose.position.x = posTagInWorld.x();  // ENU
+landing_pose.pose.position.y = posTagInWorld.y();
+landing_pose.pose.position.z = posTagInWorld.z();
+
+landing_pose.pose.orientation.x = qTagInWorld.x();
+landing_pose.pose.orientation.y = qTagInWorld.y();
+landing_pose.pose.orientation.z = qTagInWorld.z();
+landing_pose.pose.orientation.w = qTagInWorld.w();
+
+landing_pose_pub_->publish(landing_pose);
 };
 
 int main(int argc, char *argv[]) {
